@@ -1,10 +1,8 @@
 name: Build AliReturnHelper APK
-
 on:
   workflow_dispatch:
   push:
     branches: [ main ]
-
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -24,7 +22,7 @@ jobs:
         uses: android-actions/setup-android@v3
       - name: Build APK
         run: |
-          unzip -q AliReturnHelper_v0.25_popup_priority_source.zip
+          unzip -q AliReturnHelper_v0.26_webview_form_fixed_source.zip
           cd v24src
           sdkmanager "platforms;android-35" "build-tools;35.0.0"
           gradle assembleDebug
