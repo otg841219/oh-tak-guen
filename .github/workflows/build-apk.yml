@@ -23,12 +23,11 @@ jobs:
       - name: Build APK
         run: |
           unzip -qo AliReturnHelper_v0.26_webview_form_fixed_source.zip
-          cd v24src
           sdkmanager "platforms;android-35" "build-tools;35.0.0"
           gradle assembleDebug
       - name: Upload APK
         uses: actions/upload-artifact@v4
         with:
           name: AliReturnHelper-debug-apk
-          path: v24src/app/build/outputs/apk/debug/app-debug.apk
+          path: app/build/outputs/apk/debug/app-debug.apk
           if-no-files-found: error
