@@ -22,7 +22,7 @@ jobs:
         uses: android-actions/setup-android@v3
       - name: Build APK
         run: |
-          unzip -qo AliReturnHelper_v0.27_reason_tap_pc_default_source.zip
+          unzip -qo AliReturnHelper_v0.28_confirm_real_tap_source.zip
           sdkmanager "platforms;android-35" "build-tools;35.0.0"
           gradle assembleDebug
       - name: Upload APK
