@@ -22,8 +22,8 @@ jobs:
         uses: android-actions/setup-android@v3
       - name: Build APK
         run: |
-          base64 --decode AliReturnHelper_v0.29_reason_picker_fix_source.zip.b64 > AliReturnHelper_v0.29_reason_picker_fix_source.zip
-          unzip -qo AliReturnHelper_v0.29_reason_picker_fix_source.zip
+          base64 --decode AliReturnHelper_v0.30_payment_submit_source.zip.b64 > AliReturnHelper_v0.30_payment_submit_source.zip
+          unzip -qo AliReturnHelper_v0.30_payment_submit_source.zip
           sdkmanager "platforms;android-35" "build-tools;35.0.0"
           gradle assembleDebug
       - name: Upload APK
